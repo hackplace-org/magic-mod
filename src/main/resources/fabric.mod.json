@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "magic-mod",
+	"version": "${version}",
+	"name": "Magic Mod",
+	"description": "Minecraft Modding workshop for hack.place()",
+	"authors": [
+		"Anish Pallati <anishp@duck.com>"
+	],
+	"contact": {
+		"homepage": "https://hackplace.org/",
+		"sources": "https://github.com/hackplace-org/minecraft-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/magic-mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "org.hackplace.magic_mod.MagicMod"
+		],
+		"fabric-datagen": [
+			"org.hackplace.magic_mod.MagicModDataGenerator"
+		]
+	},
+	"mixins": [
+		"magic-mod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.22",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
