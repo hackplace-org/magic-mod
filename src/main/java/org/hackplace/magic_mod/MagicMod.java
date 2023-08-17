@@ -12,6 +12,6 @@ public class MagicMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		ItemHandler.register();
+		ItemHandler.registerItems();
 	}
 }

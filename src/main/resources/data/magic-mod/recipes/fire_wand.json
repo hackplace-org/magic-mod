@@ -3,21 +3,21 @@
   "category": "equipment",
   "key": {
     "C": {
-      "item": "minecraft:cherry_sapling"
+      "item": "minecraft:charcoal"
     },
     "M": {
       "item": "magic-mod:magic_wand"
     },
-    "V": {
-      "item": "minecraft:vine"
+    "B": {
+      "item": "minecraft:blaze_rod"
     }
   },
   "pattern": [
     "C",
     "M",
-    "V"
+    "B"
   ],
   "result": {
-    "item": "magic-mod:nature_wand"
+    "item": "magic-mod:fire_wand"
   }
 }
