@@ -1,0 +1,12 @@
+{
+  "item.magic-mod.magic_wand": "Magic Wand",
+  "item.magic-mod.magic_wand.tooltip": "Use it to craft other wands!",
+
+  "item.magic-mod.nature_wand": "Nature Wand",
+  "item.magic-mod.nature_wand.tooltip": "Cast spells related to nature and plants!",
+
+  "item.magic-mod.ice_wand": "Ice Wand",
+  "item.magic-mod.ice_wand.tooltip": "Cast spells related to ice and snow!",
+
+  "itemgroup.magic": "Magic"
+}

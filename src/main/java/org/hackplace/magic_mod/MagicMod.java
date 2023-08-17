@@ -2,6 +2,7 @@ package org.hackplace.magic_mod;
 
 import net.fabricmc.api.ModInitializer;
 
+import org.hackplace.magic_mod.items.ItemHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,6 +12,6 @@ public class MagicMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("Hello Fabric world!");
+		ItemHandler.register();
 	}
 }

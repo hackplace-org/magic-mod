@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "minecraft:snowball"
+    },
+    "M": {
+      "item": "magic-mod:magic_wand"
+    },
+    "S": {
+      "item": "minecraft:snow_block"
+    }
+  },
+  "pattern": [
+    "B",
+    "M",
+    "S"
+  ],
+  "result": {
+    "item": "magic-mod:ice_wand"
+  }
+}
