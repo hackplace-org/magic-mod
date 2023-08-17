@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "C": {
+      "item": "minecraft:cherry_sapling"
+    },
+    "M": {
+      "item": "magic-mod:magic_wand"
+    },
+    "V": {
+      "item": "minecraft:vine"
+    }
+  },
+  "pattern": [
+    "C",
+    "M",
+    "V"
+  ],
+  "result": {
+    "item": "magic-mod:nature_wand"
+  }
+}
