@@ -19,7 +19,6 @@ public class ItemGroupHandler {
             .entries(((displayContext, entries) -> {
                 entries.add(MAGIC_WAND);
                 entries.add(NATURE_WAND);
-                entries.add(ICE_WAND);
                 entries.add(FIRE_WAND);
             })).build();
 
