@@ -1,4 +1,4 @@
-package org.hackplace.magic_mod.items;
+package org.hackplace.magic_mod.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
@@ -7,9 +7,9 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import org.hackplace.magic_mod.MagicMod;
-import org.hackplace.magic_mod.items.custom.FireWandItem;
-import org.hackplace.magic_mod.items.custom.MagicWandItem;
-import org.hackplace.magic_mod.items.custom.NatureWandItem;
+import org.hackplace.magic_mod.item.custom.FireWandItem;
+import org.hackplace.magic_mod.item.custom.MagicWandItem;
+import org.hackplace.magic_mod.item.custom.NatureWandItem;
 
 public class ItemHandler {
     public static final Item MAGIC_WAND = register(MagicWandItem.NAME,

@@ -1,4 +1,4 @@
-package org.hackplace.magic_mod.items.custom;
+package org.hackplace.magic_mod.item.custom;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.client.item.TooltipContext;

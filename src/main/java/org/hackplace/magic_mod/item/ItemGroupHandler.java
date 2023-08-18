@@ -1,4 +1,4 @@
-package org.hackplace.magic_mod.items;
+package org.hackplace.magic_mod.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
@@ -9,7 +9,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import org.hackplace.magic_mod.MagicMod;
 
-import static org.hackplace.magic_mod.items.ItemHandler.*;
+import static org.hackplace.magic_mod.item.ItemHandler.*;
 
 public class ItemGroupHandler {
     public static final ItemGroup MAGIC_GROUP = FabricItemGroup
