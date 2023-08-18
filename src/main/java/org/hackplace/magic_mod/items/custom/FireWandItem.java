@@ -4,12 +4,15 @@ import net.minecraft.block.BlockState;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.projectile.SmallFireballEntity;
 import net.minecraft.item.FlintAndSteelItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
+import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 import org.hackplace.magic_mod.MagicMod;
 
@@ -35,6 +38,28 @@ public class FireWandItem extends FlintAndSteelItem {
     @Override
     public boolean hasGlint(ItemStack stack) {
         return true;
+    }
+
+    @Override
+    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+        boolean isClient = world.isClient();
+        if (!isClient) {
+            float yaw = user.getYaw();
+            float pitch = user.getPitch();
+            float roll = user.getRoll();
+
+            float f = -MathHelper.sin(yaw * ((float)Math.PI / 180)) * MathHelper.cos(pitch * ((float)Math.PI / 180));
+            float g = -MathHelper.sin((pitch + roll) * ((float)Math.PI / 180));
+            float h = MathHelper.cos(yaw * ((float)Math.PI / 180)) * MathHelper.cos(pitch * ((float)Math.PI / 180));
+
+            SmallFireballEntity entity = new SmallFireballEntity(world,
+                    user.getX(), user.getEyeY() - (double)0.1f, user.getZ(),
+                    f * 1.5f, g * 1.5f, h * 1.5f);
+
+            world.spawnEntity(entity);
+        }
+
+        return TypedActionResult.success(user.getStackInHand(hand), isClient);
     }
 
     @Override
