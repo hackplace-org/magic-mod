@@ -18,7 +18,7 @@ public class PlayerTickHandler implements ServerTickEvents.StartTick {
             previousTime = currentTime;
 
             for (ServerPlayerEntity player : server.getPlayerManager().getPlayerList()) {
-                ((EntityDataSaver) player).modifyManaBy(1);
+                ((EntityDataSaver) player).raiseManaBy(1);
                 player.sendMessage(Text.of("Mana is " + ((EntityDataSaver) player).getMana()));
             }
         }

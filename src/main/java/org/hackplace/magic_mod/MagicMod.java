@@ -2,7 +2,9 @@ package org.hackplace.magic_mod;
 
 import net.fabricmc.api.ModInitializer;
 
-import org.hackplace.magic_mod.items.ItemHandler;
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
+import org.hackplace.magic_mod.event.PlayerTickHandler;
+import org.hackplace.magic_mod.item.ItemHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,5 +15,6 @@ public class MagicMod implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ItemHandler.registerItems();
+		ServerTickEvents.START_SERVER_TICK.register(new PlayerTickHandler());
 	}
 }

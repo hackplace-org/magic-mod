@@ -17,7 +17,7 @@ public class ItemHandler {
     public static final Item NATURE_WAND = register(NatureWandItem.NAME,
             new NatureWandItem(new FabricItemSettings().maxCount(1).rarity(Rarity.UNCOMMON)));
     public static final Item FIRE_WAND = register(FireWandItem.NAME,
-            new FireWandItem(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
+            new FireWandItem(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE).fireproof()));
 
     private static Item register(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(MagicMod.MOD_ID, name), item);
